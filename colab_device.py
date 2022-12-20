@@ -13,11 +13,14 @@ try:
   import torch_xla.core.xla_model as xm
   print("If you run this for the first time ,Restart the Colab Instance and run this cell again")
   device = xm.xla_device()
+  device_name="tpu"
 except:
   import torch
   if torch.cuda.is_available():
     print("TPU not found,GPU found,Using Cuda ")
     device="cuda"
+    device_name="cuda"
   else:
     print("TPU and GPU not found,Using CPU ")
     device="cpu"
+    device_name="cpu"
