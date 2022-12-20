@@ -7,10 +7,11 @@ try:
   #import subprocess
   #import sys
   #subprocess.check_call(["pip", "install", "torch_tb_profiler cloud-tpu-client==0.10 torch==1.13.0 https://storage.googleapis.com/tpu-pytorch/wheels/colab/torch_xla-1.13-cp38-cp38-linux_x86_64.whl"])
-  print("If you run this for the first time ,Restart the Colab Instance and run this cell again")
+  
   import torch_xla.distributed.parallel_loader as pl
   import torch_xla
   import torch_xla.core.xla_model as xm
+  print("If you run this for the first time ,Restart the Colab Instance and run this cell again")
   device = xm.xla_device()
 except:
   import torch
