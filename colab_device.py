@@ -1,4 +1,5 @@
 try:
+  import os
   device_name = os.environ['COLAB_TPU_ADDR']
   TPU_ADDRESS = 'grpc://' + device_name
   print('Found TPU')
